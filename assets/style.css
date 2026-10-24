@@ -172,7 +172,7 @@ p {
 .hero {
   background: linear-gradient(135deg, var(--hero-from), var(--hero-to));
   color: var(--hero-text);
-  padding: 88px 0 96px;
+  padding: 88px 0 136px;
   text-align: center;
 }
 
@@ -250,6 +250,146 @@ p {
 .button-brand:hover {
   background: var(--brand-strong);
   color: var(--brand-contrast);
+}
+
+/* Product slideshow — overlaps the bottom of the hero */
+
+.showcase {
+  margin-top: -56px;
+  padding-bottom: 8px;
+}
+
+.slideshow {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.browser-frame {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 40px rgba(10, 42, 82, 0.18);
+  overflow: hidden;
+}
+
+.browser-bar {
+  display: flex;
+  gap: 6px;
+  padding: 10px 14px;
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--border);
+}
+
+.browser-bar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+/* All slides share one grid cell so the frame keeps the height of the tallest one. */
+.slides {
+  display: grid;
+}
+
+.slide {
+  grid-area: 1 / 1;
+  margin: 0;
+  display: none;
+}
+
+.slide:first-child,
+.slideshow.is-enhanced .slide {
+  display: block;
+}
+
+.slideshow.is-enhanced .slide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s;
+}
+
+.slideshow.is-enhanced .slide.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slide figcaption {
+  padding: 14px 20px 16px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.slide figcaption span {
+  display: block;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.slide-controls {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.slideshow.is-enhanced .slide-controls {
+  display: flex;
+}
+
+.slide-arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.slide-arrow:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.slide-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: var(--border);
+  cursor: pointer;
+}
+
+.slide-dot[aria-current="true"] {
+  background: var(--brand);
+  width: 26px;
+  border-radius: 999px;
+}
+
+.slide-arrow:focus-visible,
+.slide-dot:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slideshow.is-enhanced .slide {
+    transition: none;
+  }
 }
 
 /* Sections */

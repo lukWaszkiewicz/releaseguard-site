@@ -2,7 +2,7 @@
 
 Public product website for ReleaseGuard, served by GitHub Pages at https://releaseguard.code-it.info.
 
-Plain static HTML and one stylesheet — no build step, no scripts, no external fonts, cookies or trackers.
+Plain static HTML, one stylesheet and one small script for the product slideshow (`assets/slideshow.js`) — no build step, no external scripts or fonts, no cookies or trackers. Slideshow images live in `assets/slides/` (cropped from the ReleaseGuard repo's `docs/demo/`).
 
 | File | Page |
 |---|---|
