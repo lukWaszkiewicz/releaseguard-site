@@ -41,6 +41,42 @@
       </div>
     </section>
 
+    <section class="showcase" aria-label="Product screenshots">
+      <div class="container">
+        <div class="slideshow" data-slideshow>
+          <div class="browser-frame">
+            <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="slides">
+              <figure class="slide is-active">
+                <img src="assets/slides/01-dashboard.png" width="1425" height="797" alt="ReleaseGuard dashboard showing the next Salesforce release, open findings by severity and when each change takes effect">
+                <figcaption>Readiness at a glance<span>Open findings by severity, and when each platform change takes effect.</span></figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/slides/02-findings-and-rules.png" width="1425" height="797" alt="Findings table with severity, rule, component, release and date, above the outcome of every rule in the last scan" loading="lazy">
+                <figcaption>Every rule reports an outcome<span>Findings, passes and "no evidence" — never a false pass.</span></figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/slides/03-finding-detail.png" width="1425" height="797" alt="Finding detail for the SOAP API login() retirement with severity, evidence and numbered steps to fix it" loading="lazy">
+                <figcaption>Evidence and the steps to fix it<span>What changed, why it matters, and a link to the Salesforce documentation.</span></figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/slides/04-notifications.png" width="1425" height="797" alt="Salesforce notification announcing that new ReleaseGuard rules are available" loading="lazy">
+                <figcaption>New rules with every update<span>Admins are notified when a package update brings new checks.</span></figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="slide-controls">
+            <button class="slide-arrow" type="button" data-slide-previous aria-label="Previous screenshot">&#8249;</button>
+            <button class="slide-dot" type="button" aria-label="Screenshot 1"></button>
+            <button class="slide-dot" type="button" aria-label="Screenshot 2"></button>
+            <button class="slide-dot" type="button" aria-label="Screenshot 3"></button>
+            <button class="slide-dot" type="button" aria-label="Screenshot 4"></button>
+            <button class="slide-arrow" type="button" data-slide-next aria-label="Next screenshot">&#8250;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
         <h2>Built for the changes that actually stop things working</h2>
@@ -179,5 +215,6 @@
         not affiliated with or endorsed by Salesforce.</p>
     </div>
   </footer>
+  <script src="assets/slideshow.js" defer></script>
 </body>
 </html>
